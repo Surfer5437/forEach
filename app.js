@@ -27,3 +27,22 @@ function onlyEvenValues(val){
     });
     return evenNum;
 }
+
+
+// showFirstAndLast
+// Write a function called showFirstAndLast which accepts an array of strings and returns a new array with only the first and last character of each string.
+
+// showFirstAndLast(['colt','matt', 'tim', 'test']) // ["ct", "mt", "tm", "tt"]
+// showFirstAndLast(['hi', 'goodbye', 'smile']) // ['hi', 'ge', 'se']
+
+
+function showFirstAndLast(names){
+    const listAbbreviations=[];
+    names.forEach(function(name){
+        let s="";
+        s=name[0];
+            s+=name[name.length-1];
+listAbbreviations.push(s)
+    });
+    return listAbbreviations;
+}
