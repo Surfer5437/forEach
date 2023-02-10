@@ -108,3 +108,19 @@ function vowelCount(stringer){
     }
 return arr;
 }
+
+// doubleValuesWithMap
+// Write a function called doubleValuesWithMap which accepts an array and returns a new array with all the values in the array passed to the function doubled
+
+// doubleValuesWithMap([1,2,3]) // [2,4,6]
+// doubleValuesWithMap([1,-2,-3]) // [2,-4,-6]
+// function doubleValuesWithMap(arr) {}
+
+
+function doubleValuesWithMap(value){
+
+
+    value.map(function(val) {
+        return val * 2;
+    });
+}
