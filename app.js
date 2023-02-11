@@ -3,10 +3,10 @@
 
 // doubleValues([1,2,3]) // [2,4,6]
 // doubleValues([5,1,2,3,10]) // [10,2,4,6,20]
-function doubleValues(val){
+function doubleValues(val) {
     const doublesArr = [];
     val.forEach(num => {
-        doublesArr.push(num *2);
+        doublesArr.push(num * 2);
     });
     return doublesArr;
 }
@@ -18,10 +18,10 @@ function doubleValues(val){
 // onlyEvenValues([1,2,3]) // [2]
 // onlyEvenValues([5,1,2,3,10]) // [2,10]
 
-function onlyEvenValues(val){
-    const evenNum=[];
+function onlyEvenValues(val) {
+    const evenNum = [];
     val.forEach(num => {
-        if (num%2==0) {
+        if (num % 2 == 0) {
             evenNum.push(num);
         }
     });
@@ -36,13 +36,13 @@ function onlyEvenValues(val){
 // showFirstAndLast(['hi', 'goodbye', 'smile']) // ['hi', 'ge', 'se']
 
 
-function showFirstAndLast(names){
-    const listAbbreviations=[];
-    names.forEach(function(name){
-        let s="";
-        s=name[0];
-            s+=name[name.length-1];
-listAbbreviations.push(s)
+function showFirstAndLast(names) {
+    const listAbbreviations = [];
+    names.forEach(function (name) {
+        let s = "";
+        s = name[0];
+        s += name[name.length - 1];
+        listAbbreviations.push(s)
     });
     return listAbbreviations;
 }
@@ -72,10 +72,10 @@ listAbbreviations.push(s)
 // */
 
 
-function addKeyAndValue(arr,key,val){
+function addKeyAndValue(arr, key, val) {
     const newArr = [];
     arr.forEach(element => {
-        element[key]=val;
+        element[key] = val;
         newArr.push(element)
     });
     return newArr;
@@ -91,22 +91,22 @@ function addKeyAndValue(arr,key,val){
 // vowelCount('hmmm') // {};
 // vowelCount('I Am awesome and so are you') // {i: 1, a: 4, e: 3, o: 3, u: 1}
 
-function vowelCount(stringer){
+function vowelCount(stringer) {
     const str = stringer.toLowerCase();
-    const vowels = ['a','e','i','o','u'];
+    const vowels = ['a', 'e', 'i', 'o', 'u'];
     const arr = {};
     for (const vLetter of vowels) {
         let counter = 0;
-        for(const wLetter of str){
+        for (const wLetter of str) {
             if (vLetter === wLetter) {
-            counter++;
+                counter++;
+            }
         }
+        if (counter > 0) {
+            arr[vLetter] = counter;
         }
-    if (counter>0) {
-    arr[vLetter]=counter;
     }
-    }
-return arr;
+    return arr;
 }
 
 // doubleValuesWithMap
@@ -117,10 +117,11 @@ return arr;
 // function doubleValuesWithMap(arr) {}
 
 
-function doubleValuesWithMap(value){
-
-
-    value.map(function(val) {
-        return val * 2;
+function doubleValuesWithMap(values) {
+    const newArr = values.map(num => {
+        return num * 2;
     });
+    return newArr;
 }
+
+
