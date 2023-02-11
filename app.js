@@ -184,3 +184,31 @@ function extractFullName(arr) {
     })
     return thisFucker;
 };
+
+
+// filterByValue
+// Write a function called filterByValue which accepts an array of objects and a key and returns a new array with all the objects that contain that key.
+
+// filterByValue(
+// [
+//   {first: 'Elie', last:"Schoppik"},
+//   {first: 'Tim', last:"Garcia", isCatOwner: true},
+//   {first: 'Matt', last:"Lane"},
+//   {first: 'Colt', last:"Steele", isCatOwner: true}
+// ],
+// 'isCatOwner'
+// )
+
+// /*
+//   [
+//     {first: 'Tim', last:"Garcia", isCatOwner: true},
+//     {first: 'Colt', last:"Steele", isCatOwner: true}
+//   ]
+// */
+
+function filterByValue(arr, keyName) {
+    const val = arr.filter(item => {
+        return item[keyName];
+    });
+    return val;
+};
