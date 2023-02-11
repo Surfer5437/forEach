@@ -138,3 +138,49 @@ function valTimesIndex(values) {
     });
     return newArr;
 }
+
+
+// extractKey
+// Write a function called extractKey which accepts an array of objects and some key and returns a new array with the value of that key in each object.
+
+// extractKey(
+//   [
+//     {name: 'Elie'},
+//     {name: 'Tim'},
+//     {name: 'Matt'},
+//     {name: 'Colt'}
+//   ],
+//   'name'
+// )
+
+//   // ['Elie', 'Tim', Matt', 'Colt']
+
+function extractKey(arr, keyName) {
+    const thisFucker = arr.map(fuckers => {
+        return fuckers[keyName];
+    })
+    return thisFucker;
+};
+
+
+// extractFullName
+// Write a function called extractFullName which accepts an array of objects and returns a new array with the value of the key with a name of “first” and the value of a key with the name of “last” in each object, concatenated together with a space.
+
+// /*
+// extractFullName([
+//   {first: 'Elie', last:"Schoppik"},
+//   {first: 'Tim', last:"Garcia"},
+//   {first: 'Matt', last:"Lane"},
+//   {first: 'Colt', last:"Steele"}
+// ])
+
+//   // ['Elie Schoppik', 'Tim Garcia', 'Matt Lane', 'Colt Steele']
+// */
+
+
+function extractFullName(arr) {
+    const thisFucker = arr.map(fuckers => {
+        return `${fuckers['first']} ${fuckers['last']}`;
+    })
+    return thisFucker;
+};
