@@ -249,3 +249,23 @@ function findInObj(arr, keyName) {
     });
     return val[0];
 };
+
+
+// removeVowels
+// Write a function called removeVowels which accepts a string and returns a new string with all of the vowels (both uppercased and lowercased) removed. Every character in the new string should be lowercased.
+
+// removeVowels('Elie') // ('l')
+// removeVowels('TIM') // ('tm')
+// removeVowels('ZZZZZZ') // ('zzzzzz')
+
+function removeVowels(str) {
+    const vowels = 'aeiou';
+    let final = "";
+    const newstr = str.toLowerCase();
+    for (const letter of newstr) {
+        if (vowels.indexOf(letter) === -1) {
+            final += letter;
+        }
+    };
+    return final;
+};
